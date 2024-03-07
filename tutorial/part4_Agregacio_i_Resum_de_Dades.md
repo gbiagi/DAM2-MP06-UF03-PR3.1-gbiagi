@@ -35,18 +35,17 @@ Les funcions d'agregació permeten realitzar càlculs com sumes, mitjanes, i tot
 
 A més de les funcions d'agregació bàsiques, XQuery pot ser utilitzat per crear informes detallats que resumin les dades de maneres complexes.
 
-4. **Població Total per Continent**:
-   Aquest exemple mostra com generar un resum de la població total per cada continent, agrupant els països per continent:
+4. **Població Total d'un país sumant les poblacions de les ciutats**:
+   Aquest exemple mostra com generar un resum de la població total per cada pais sumant les poblacions de les seves ciutats:
    ```xquery
-   for $continent in //continent
-   let $countries := //country[@continent = $continent/@id]
-   group by $continentID := $continent/@id
-   return
-     <continent id="{$continentID}" name="{$continent/@name}">
-       <total_population>{
-         sum($countries/@population/number())
-       }</total_population>
-     </continent>
+    let $countries := 
+      for $country in //country
+      let $populationSum := sum($country/city/population/number())
+      order by $populationSum descending
+      return
+        <country name="{$country/@name}" population="{$populationSum}"/>
+
+    return $countries
    ```
    En aquest cas, s'utilitza `group by` per agrupar els resultats per continent, tot i que l'ús exacte de `group by` pot dependre de la versió d'XQuery suportada pel teu sistema BaseX.
 
