@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.basex.api.client.ClientSession;
 import org.basex.core.*;
 import org.basex.core.cmd.*;
-import org.basex.server.*;
 
 
 import org.slf4j.Logger;

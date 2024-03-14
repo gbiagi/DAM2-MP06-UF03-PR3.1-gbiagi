@@ -31,6 +31,35 @@
         <version>10.7</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.apache.opennlp/opennlp-tools -->
+    <dependency>
+        <groupId>org.apache.opennlp</groupId>
+        <artifactId>opennlp-tools</artifactId>
+        <version>2.3.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+    <dependency>
+        <groupId>edu.stanford.nlp</groupId>
+        <artifactId>stanford-corenlp</artifactId>
+        <version>4.5.6</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+    <dependency>
+        <groupId>edu.stanford.nlp</groupId>
+        <artifactId>stanford-corenlp</artifactId>
+        <version>4.5.6</version>
+        <classifier>models</classifier>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20240303</version>
+    </dependency>
+
     <dependency>
         <groupId>javax.json</groupId>
         <artifactId>javax.json-api</artifactId>
