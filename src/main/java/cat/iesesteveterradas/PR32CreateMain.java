@@ -9,8 +9,8 @@ public class PR32CreateMain {
     public static void main(String[] args) {
         // Connectar-se a MongoDB (substitueix amb la teva URI de connexió)
         try (var mongoClient = MongoClients.create("mongodb://root:example@http://127.0.0.1:8081/")) {
-            MongoDatabase database = mongoClient.getDatabase("yourDatabaseName");
-            MongoCollection<Document> collection = database.getCollection("yourCollectionName");
+            MongoDatabase database = mongoClient.getDatabase("PRMongo");
+            MongoCollection<Document> collection = database.getCollection("pr31");
 
             // Crear un nou document
             Document question = new Document("title", "How to use MongoDB with Java?")
