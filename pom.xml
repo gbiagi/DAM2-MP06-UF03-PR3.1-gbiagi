@@ -46,6 +46,18 @@
         <version>5.0.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version> <!-- or the latest version -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-text</artifactId>
+      <version>1.11.0</version>
+     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.basex/basex-api -->
     <dependency>
         <groupId>org.basex</groupId>

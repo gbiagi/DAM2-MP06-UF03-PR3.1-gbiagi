@@ -7,4 +7,13 @@
     <root level="info">
         <appender-ref ref="console" />
     </root>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>data/logs/PR32CreateMain.java.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="FILE" />
+    </root>
 </configuration>
