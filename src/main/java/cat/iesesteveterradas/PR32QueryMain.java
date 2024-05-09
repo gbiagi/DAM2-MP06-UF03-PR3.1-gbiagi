@@ -37,13 +37,13 @@ public class PR32QueryMain {
                 System.out.println(title);
             }
             // Generar el report en pdf
-            generatePDFReport(titlesAboveAvg, "questionsAboveAvg");
+            generatePDFReport(titlesAboveAvg, "informe1");
 
             // Troba les preguntes amb títols que continguin les lletres especificades
             List<String> titlesWithLetters = findQuestionsWithTitleLetters(collection);
 
-            // Generar el report en pdf
-            //generatePDFReport(titlesWithLetters, "questionsWithLetters");
+            // Generar el report en pdf - comentat per no generar un document vuit
+            //generatePDFReport(titlesWithLetters, "informe2");
 
             // Imprimeix el resultat
             System.out.println("\nPreguntes amb títols que continguin les lletres especificades: " + titlesWithLetters);        } catch (Exception e) {
