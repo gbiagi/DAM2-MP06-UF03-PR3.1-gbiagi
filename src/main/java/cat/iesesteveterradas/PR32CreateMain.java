@@ -19,7 +19,7 @@ public class PR32CreateMain {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        // Connect to MongoDB (replace with your connection URI)
+        // Connect to MongoDB
         try (var mongoClient = MongoClients.create("mongodb://root:example@localhost:27017")) {
             MongoDatabase database = mongoClient.getDatabase("PRMongo");
             MongoCollection<Document> collection = database.getCollection("pr31");
