@@ -42,8 +42,8 @@ public class PR32QueryMain {
             // Troba les preguntes amb títols que continguin les lletres especificades
             List<String> titlesWithLetters = findQuestionsWithTitleLetters(collection);
 
-            // Generar el report en pdf - comentat per no generar un document vuit
-            //generatePDFReport(titlesWithLetters, "informe2");
+            // Generar el report en pdf
+            generatePDFReport(titlesWithLetters, "informe2");
 
             // Imprimeix el resultat
             System.out.println("\nPreguntes amb títols que continguin les lletres especificades: " + titlesWithLetters);        } catch (Exception e) {
@@ -85,7 +85,10 @@ public class PR32QueryMain {
     }
     private static List<String> findQuestionsWithTitleLetters(MongoCollection<Document> collection) {
         List<String> titles = new ArrayList<>();
-        Pattern pattern = Pattern.compile("(pug|wig|yak|nap|jig|mug|zap|gag|oaf|elf)", Pattern.CASE_INSENSITIVE);
+        // Cambio las palabras para demostrar la funcionalidad
+        //Pattern pattern = Pattern.compile("(pug|wig|yak|nap|jig|mug|zap|gag|oaf|elf)", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("Where", Pattern.CASE_INSENSITIVE);
+
         Bson filter = Filters.regex("Title", pattern);
         Bson projection = Projections.fields(Projections.include("Title"), Projections.excludeId());
         MongoCursor<Document> cursor = collection.find(filter).projection(projection).iterator();
